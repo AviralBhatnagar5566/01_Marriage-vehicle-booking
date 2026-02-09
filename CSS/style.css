@@ -1,12 +1,14 @@
 body{
     font-family:Segoe UI, Arial, sans-serif;
-    margin: 20px;
+    margin: 0px;
     padding: 0;
-    background-color: #f0f2f5 ;/*#f5f5f5 */
+    /* background-color: #f0f2f5;#f5f5f5 */
     /* background-image: url("../image/car_buses.png");
      background-size: contain; */
-    
+    background-color: #f6f8fb;
 }
+    
+
 #booking{
     font-family:Segoe UI, Arial, sans-serif;
     margin: 0px;
@@ -25,8 +27,11 @@ body{
 h1{
     font-size: 40px;
     text-align: center;
-    color:maroon;/*#EA980E*/
-    margin-bottom: 30px ;
+    color:#001f3d;/*#EA980E*/
+    /* margin-bottom: 30px ; */
+}
+#heading{
+    color: #EA980E;
 }
 h3{
     text-align: center;
@@ -42,15 +47,20 @@ p{
     line-height: 1.7;
 }
 button{
-    padding: 10px;
+    padding: 12px;
+    font-size: 16px;
     color: #E6E6E6;
     background-color: #001F3D;
+    margin-left:30px ;
     /* border: 2px solid black; */
     cursor: pointer;
-    border-radius: 12px;
-    
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     background-color: #E7DDD1;
     color: black;
 }
@@ -62,7 +72,7 @@ button:hover{
     padding: 30px;
     background-color:  #ffffff;/*#79C9C5*/
     border-radius: 25px;
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
    
     box-sizing: border-box;
     
@@ -98,18 +108,32 @@ form{
 
 #herosection{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 300px;
     max-width: 100%;
+    padding-top: 30px;
+    background-color: transparent;
+
     /* background-image: url("../image/car_buses.png");
      background-size:cover; */
 }
 
 /* 79C9C5 */
 /* #FFFDE1 */
+#herotext{
+    max-width: 300px;
+    font-size: large;
+    margin-left: 30px;
+}
 
+@media (max-width: 768px){
+    #herosection{
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 
 section{
@@ -125,7 +149,7 @@ section{
     background-color: white;
     color: #EA980E;
     border-radius: 20px;
-    box-shadow: 8px 8px 8px rgb(28, 28, 28);
+    box-shadow: 2px 2px 2px rgb(28, 28, 28);
     max-width: 250px;
     text-align: center;
     transition: all 0.4s ease-in-out 0s ;
@@ -136,10 +160,91 @@ section{
     box-shadow: 10px 10px 10px rgb(28, 28, 28);;
   
 }
-
 .heroimage{
-    max-width: 470px;
-    height: 220px;
+    max-width: 500px;
+    /* height: 220px; */
     width: 100%;
-    margin-top : 20px ;
+    border-radius: 20px;
+    /* margin-top : 30px ; */
+    transition: all 0.4s ease-in-out 0s ;
+}
+.heroimage:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 10px rgb(28, 28, 28);;
+  
+}
+   
+#contact{
+    
+    border: 3px solid black;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+#navBar{
+    
+    background-color: navy;
+    padding: 5px 3px 5px 3px;
+    box-shadow: 2px 2px 2px rgb(28, 28, 28) ;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#navBar ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content:right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+a{
+    text-decoration: none;
+    color: #E6E6E6;
+
+}
+#navBar li{
+    padding: 20px;
+    font-size: large;
+    
+    padding-left: 20px;
+   
+}
+#navBar li:hover{
+    background-color: #EA980E;
+    
+}
+#brand{
+    display: flex;
+    align-items: center;
+    
+    justify-content: left;
+
+}
+.logo-emoji{
+    font-size: 24px;
+    color: gold;
+}
+.logo-text{
+    color: gold;
+    font-weight: bold;
+}
+
+#copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: navy;
+    color: white;
 }
