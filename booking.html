@@ -13,14 +13,18 @@
         <p id="description">Fill the details below to book buses or cars for your marriage function.</p>
         <form id="BookingForm">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
+            <input type="text" id="name" placeholder="Enter your name" >
+            <span class="error" id="nameError"></span>
+
 
             <label for="gmail">gmail</label>
-            <input type="text" id="gmail" placeholder="Enter gmail">
-            
+            <input type="text" id="gmail" placeholder="Enter gmail" >
+            <span class="error" id="gmailError"></span>
+
             <label for="date">Date</label>
-            <input type="date">
-            
+            <input type="date" id="date" >
+            <span class="error" id="dateError"></span>
+
             <label for="Vehicles">Vehicles</label>
             <select name="transport" id="Vehicles">
                 <option value="Car">Car</option>
@@ -29,7 +33,7 @@
             </select>
             <input type="number" placeholder="Number of vehicles" >
             <input type="submit" id="submit">
-
+            <p id="sucessMsg" style="color: green;"></p>
 
         </form>
     </div>

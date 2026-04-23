@@ -248,3 +248,8 @@ a{
     background-color: navy;
     color: white;
 }
+
+.error{
+    color: red;
+    font-size: 12px;
+}
