@@ -16,6 +16,7 @@ form.addEventListener("submit",async function (event){
     document.getElementById("gmailError").innerText = "";
     document.getElementById("dateError").innerText = "";
     document.getElementById("sucessMsg").innerText = "";
+    document.getElementById("VehicleError").innerText = "";
 
     
 
@@ -39,8 +40,8 @@ form.addEventListener("submit",async function (event){
         document.getElementById("VehicleError").innerText ="#️⃣ fill the number of Vehicle"
         isvalue = false
     }
-    if(Vehicle > 10){
-        document.getElementById("VehicleError").innerText ="⚠️Cannot Book More Than 10 Vehicle"
+    if(Vehicle > 10 || Vehicle < 0){
+        document.getElementById("VehicleError").innerText ="⚠️Cannot Book More Than 10 Vehicle / below 0"
         isvalue = false
     }
     if(isvalue){
@@ -52,10 +53,7 @@ form.addEventListener("submit",async function (event){
        else{
             document.getElementById("sucessMsg").innerText ="❌ SomeThing Went Wrong"
 
-       }
-       
-        
-        
+       }     
         
         console.log("Form submitted",name,email,date);
     
@@ -82,5 +80,5 @@ form.addEventListener("submit",async function (event){
             console.log("error",error);
             return false
         }
-    }
+    } 
 })
