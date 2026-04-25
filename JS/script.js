@@ -6,7 +6,7 @@ form.addEventListener("submit",async function (event){
     const name =document.getElementById("name").value.trim()
     const email =document.getElementById("gmail").value.trim()
     const date = document.getElementById("date").value.trim()
-    const Vehicle = document.getElementById("Vehicle").value.trim()
+    const Vehiclenum = Number(document.getElementById("Vehiclenum").value)
     const selectedDate = new Date(date)
     const today = new Date()
     today.setHours(0,0,0,0)
@@ -30,22 +30,23 @@ form.addEventListener("submit",async function (event){
     }
     if(!date){
         document.getElementById("dateError").innerText = "select Date";
+        isvalue = false
     }
 
     if (selectedDate < today) {
         document.getElementById("dateError").innerText = "🗓️ Date cannot be in the past";
         isvalue = false
     }
-    if(!Vehicle){
+    if(!Vehiclenum){
         document.getElementById("VehicleError").innerText ="#️⃣ fill the number of Vehicle"
         isvalue = false
     }
-    if(Vehicle > 10 || Vehicle < 0){
+    if(Vehiclenum > 10 || Vehiclenum < 0){
         document.getElementById("VehicleError").innerText ="⚠️Cannot Book More Than 10 Vehicle / below 0"
         isvalue = false
     }
     if(isvalue){
-        const success = await api(name,email)
+        const success = await api(name,email,date)
         if(success){
             document.getElementById("sucessMsg").innerText ="✅ Booking submitted successfully!"
             form.reset()
