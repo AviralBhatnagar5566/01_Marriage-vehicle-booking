@@ -6,7 +6,7 @@ form.addEventListener("submit",async function (event){
     const name =document.getElementById("name").value.trim()
     const email =document.getElementById("gmail").value.trim()
     const date = document.getElementById("date").value.trim()
-    const Vehiclenum = Number(document.getElementById("Vehiclenum").value)
+    const Vehiclenum = Number(document.getElementById("vehiclenum").value)
     const selectedDate = new Date(date)
     const today = new Date()
     today.setHours(0,0,0,0)
