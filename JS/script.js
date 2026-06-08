@@ -1,12 +1,39 @@
 const form =document.getElementById("BookingForm")
 
+const response = async function api(name,email,date,vehicle,vehiclenum) {
+    try{
+        const response = await fetch("http://localhost:8000/api/v1/users/bookingUser",{
+            method: "POST",
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify({
+            name,
+            email,
+            date,
+            vehicle,
+            vehiclenum
+             })
+            })
+            if(!response.ok){
+                return false;
+        }
+            const data = await response.json();
+            console.log(data);
+            
+            return true
+        }
+        catch(error){
+            console.log("error",error);
+            return false
+        }
+    } 
 
 form.addEventListener("submit",async function (event){
     event.preventDefault();
     const name =document.getElementById("name").value.trim()
-    const email =document.getElementById("gmail").value.trim()
+    const email =document.getElementById("email").value.trim()
     const date = document.getElementById("date").value.trim()
-    const Vehiclenum = Number(document.getElementById("vehiclenum").value)
+    const vehicle = document.getElementById("Vehicles").value
+    const vehiclenum = Number(document.getElementById("vehiclenum").value)
     const selectedDate = new Date(date)
     const today = new Date()
     today.setHours(0,0,0,0)
@@ -37,16 +64,16 @@ form.addEventListener("submit",async function (event){
         document.getElementById("dateError").innerText = "🗓️ Date cannot be in the past";
         isvalue = false
     }
-    if(!Vehiclenum){
+    if(!vehiclenum){
         document.getElementById("VehicleError").innerText ="#️⃣ fill the number of Vehicle"
         isvalue = false
     }
-    if(Vehiclenum > 10 || Vehiclenum < 0){
+    if(vehiclenum > 10 || vehiclenum < 0){
         document.getElementById("VehicleError").innerText ="⚠️Cannot Book More Than 10 Vehicle / below 0"
         isvalue = false
     }
     if(isvalue){
-        const success = await api(name,email,date)
+        const success = await response(name,email,date,vehicle,vehiclenum)
         if(success){
             document.getElementById("sucessMsg").innerText ="✅ Booking submitted successfully!"
             form.reset()
@@ -60,26 +87,4 @@ form.addEventListener("submit",async function (event){
     
     }
     
-
-    async function api(name,gmail,date) {
-        try{
-            const response = await fetch("https://jsonplaceholder.typicode.com/posts",{
-               method: "POST",
-               headers:{"Content-Type": "application/json"},
-                body: JSON.stringify({
-                name,
-                email,
-                date
-             })
-            })
-            const data = await response.json();
-            console.log(data);
-            
-            return true
-        }
-        catch(error){
-            console.log("error",error);
-            return false
-        }
-    } 
 })
