@@ -2,7 +2,7 @@ const form =document.getElementById("BookingForm")
 
 const response = async function api(name,email,date,vehicle,vehiclenum) {
     try{
-        const response = await fetch("http://localhost:8000/api/v1/users/bookingUser",{
+        const response = await fetch("https://zero1-marriage-vehicle-booking.onrender.com/api/v1/users/bookingUser",{
             method: "POST",
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify({
