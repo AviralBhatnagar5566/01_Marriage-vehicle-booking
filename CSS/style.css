@@ -253,3 +253,13 @@ a{
     color: red;
     font-size: 12px;
 }
+#bookingshead{
+    background-color: #001F3D;
+    padding: 3px 3px 3px 3px;
+}
+#bookings{
+    background-color:#f0f2f5 ;
+}
+#bookingsh1{
+    color: white;
+}

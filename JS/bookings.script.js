@@ -8,14 +8,14 @@ const bookings = async function bookings() {
         const div = document.createElement("div");
 
         div.innerHTML = `
-            <h3>${booking.name}</h3>
+            <h3>Name: ${booking.name}</h3>
             <p>Email: ${booking.email}</p>
             <p>Vehicle: ${booking.vehicle}</p>
             <p>Number: ${booking.vehiclenum}</p>
             <hr>
         `;
 
-        bookingList.appendChild(div);
+        bookinglist.appendChild(div);
     });
     
 }
