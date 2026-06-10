@@ -15,8 +15,17 @@ const bookings = async function bookings() {
             <hr>
         `;
 
-        bookinglist.appendChild(div);
+        ;
+        const button = document.createElement("button");
+        button.innerText = "Delete";
+
+        button.addEventListener("click", async () => {
+            await deleteBooking(booking._id);
+        });
+
+        div.appendChild(button);
+        bookinglist.appendChild(div)
     });
-    
 }
+   
 bookings()
