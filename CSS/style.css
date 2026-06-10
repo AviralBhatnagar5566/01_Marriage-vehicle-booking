@@ -253,13 +253,41 @@ a{
     color: red;
     font-size: 12px;
 }
-#bookingshead{
-    background-color: #001F3D;
+.bookingshead{
+    background-color: #0b111e;
+    color: #f8f9fa;
     padding: 3px 3px 3px 3px;
+    
+}
+.bookingshead h1{
+    color: white;
 }
 #bookings{
     background-color:#f0f2f5 ;
+    
 }
-#bookingsh1{
-    color: white;
+
+.bookinglist{
+    background-color: #1a2333 ;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    color: #212529;
+    padding: 3px;
+}
+.bookinglist h3{
+    color: #fcc419;
+}
+.bookinglist p {
+    color: #e9ecef; /* Clean white-gray for the details */
+}
+
+.deletebutton{
+    padding: 3px;
+    margin: 3px;
+    color: #E6E6E6;
+    background-color: #001F3D;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    align-items: right;
+    justify-content: right;
 }
