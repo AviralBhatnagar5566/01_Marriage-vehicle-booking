@@ -1,3 +1,5 @@
+
+
 // import  {deleteBooking} from "../JS/delete.script.js"
 const bookings = async function bookings() {
     const response = await fetch("https://zero1-marriage-vehicle-booking.onrender.com/api/v1/users/bookings")
@@ -25,7 +27,18 @@ const bookings = async function bookings() {
             await deleteBooking(booking._id);
         });
 
+        const editButton = document.createElement("button")
+        editButton.classList.add("editbutton")
+        editButton.innerText = "EDIT"
+
+        editButton.addEventListener("click",async () =>{
+             window.location.href = `update.html?id=${booking._id}`;
+        });
+        
+
+
         div.appendChild(button);
+        div.appendChild(editButton)
         bookinglist.appendChild(div)
     });
 }

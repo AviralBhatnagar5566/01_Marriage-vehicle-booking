@@ -288,6 +288,5 @@ a{
     background-color: #001F3D;
     cursor: pointer;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    align-items: right;
-    justify-content: right;
+    
 }

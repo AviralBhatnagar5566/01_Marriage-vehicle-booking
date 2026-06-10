@@ -5,11 +5,26 @@ import { Booking } from "../models/Booking.model.js";
 
 
 const bookinglist = asyncHandler(async (req,res,next) => {
+   
     const booking = await Booking.find()
+    
 
     return res.status(200).json(
         new APIresponse(200,booking,"YOUR DATA!")
     )
 })
+const Bookingbyid = asyncHandler(async (req,res,next) =>{
+     const { id } = req.params
+     const booking = await Booking.findById(id)
+
+     if(!booking){
+        throw new APIerror(404,"id not found")
+     }
+     return res.status(200).json(
+        new APIresponse(200,booking,"ID FOUND!")
+     )
+})
 
 export { bookinglist }
+
+export{ Bookingbyid }
