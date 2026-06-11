@@ -49,7 +49,9 @@ form.addEventListener("submit",async function response(event) {
             })
     })
     const data = await response.json()
-
+    document.getElementById("sucessMsg").innerText =
+    "Booking updated successfully!";
+    window.location.href = "bookings.html";
     
     
 })
