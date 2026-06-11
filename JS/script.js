@@ -32,7 +32,7 @@ form.addEventListener("submit",async function (event){
     const name =document.getElementById("name").value.trim()
     const email =document.getElementById("email").value.trim()
     const date = document.getElementById("date").value.trim()
-    const vehicle = document.getElementById("Vehicles").value
+    const vehicle = document.getElementById("vehicle").value
     const vehiclenum = Number(document.getElementById("vehiclenum").value)
     const selectedDate = new Date(date)
     const today = new Date()
