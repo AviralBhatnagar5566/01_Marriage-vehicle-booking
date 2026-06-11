@@ -9,7 +9,7 @@ const form =document.getElementById("BookingForm")
 
 const response = async function api() {
     try{
-        const res = await fetch(`http://localhost:8000/api/v1/users/bookingbyid/${id}`)
+        const res = await fetch(`https://zero1-marriage-vehicle-booking.onrender.com/api/v1/users/bookingbyid/${id}`)
         const data = await res.json()
         console.log(data);
         
@@ -37,7 +37,7 @@ form.addEventListener("submit",async function response(event) {
     console.log(vehiclenum);
     
     console.log("submit clicked");
-    const response = await fetch(`http://localhost:8000/api/v1/users/update/${id}`,{
+    const response = await fetch(`https://zero1-marriage-vehicle-booking.onrender.com/api/v1/users/update/${id}`,{
         method:"PATCH",
         headers:{"Content-Type": "application/json"},
 
