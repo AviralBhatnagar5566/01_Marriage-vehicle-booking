@@ -315,3 +315,120 @@ a{
     background-repeat: no-repeat;
     background-attachment: fixed
 }
+
+@media (max-width: 768px) {
+  #navBar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  #navBar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  #navBar li {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  #brand {
+    justify-content: center;
+  }
+
+  #herosection {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #herotext {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  #paragraph {
+    letter-spacing: 1px;
+  }
+
+  .heroimage {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .cards {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  #contact {
+    margin: 30px 15px;
+  }
+
+  #copyright {
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  #copyright h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  #booking,
+  #updatepage {
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  #container {
+    width: 100%;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  input,
+  select,
+  button,
+  #submit {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  #description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+    #booking,
+    #updatepage {
+        background-size: cover;
+        background-position: center;
+  }
+}
