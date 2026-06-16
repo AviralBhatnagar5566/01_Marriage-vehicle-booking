@@ -5,10 +5,10 @@ import { APIresponse } from "../utils/ApiResponse.js"
 
 const bookingUser = asyncHandler(async (req,res,next) =>{
     const {name,email,date,vehicle,vehiclenum} = req.body
-    if(!name.trim()){
+    if(!name||!name.trim()){
         throw new APIerror(400,"Name is missing")
     }
-    if(!email.trim()){
+    if(!email||!email.trim()){
         throw new APIerror(400,"Email is missing")
     }
     if(!date){
